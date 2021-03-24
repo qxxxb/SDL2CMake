@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.11...3.16)
+project(stupid)
+find_package(SDL2 REQUIRED)
+add_executable(stupid main.cpp)
+target_include_directories(stupid SYSTEM PUBLIC ${SDL2_INCLUDE_DIRS})
+target_link_libraries(stupid ${SDL2_LIBRARIES})
